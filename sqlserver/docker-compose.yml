@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      - MSSQL_SA_PASSWORD=Dakota123%
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - "1434:1433"
