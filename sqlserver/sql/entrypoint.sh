@@ -1,23 +1,29 @@
 #!/bin/bash
-database=rueggerllc
+database=$DBNAME
 wait_time=15s
-password=Dakota123%
+password=$MSSQL_SA_PASSWORD
 
 # wait for SQL Server to come up
-echo importing data will start in $wait_time...
+echo SQLServer startup specified db is $DBNAME
+echo Data Setup will start in $wait_time...
 sleep $wait_time
-echo importing data...
 
-# run the init script to create the DB and the tables in /table
-/opt/mssql-tools/bin/sqlcmd -S 0.0.0.0 -U sa -P $password -i ./init.sql
 
+# Run the init script to create the DB and the tables in /table
+echo 'drop database' $database';' > ./dbinit.sql
+echo 'create database' $database';' >> ./dbinit.sql
+echo Init DB $database ...
+/opt/mssql-tools/bin/sqlcmd -S 0.0.0.0 -U sa -P $password -i ./dbinit.sql
+
+echo Executing SQL commands
 for entry in "table/*.sql"
 do
   echo executing $entry
-  /opt/mssql-tools/bin/sqlcmd -S 0.0.0.0 -U sa -P $password -i $entry
+  /opt/mssql-tools/bin/sqlcmd -S 0.0.0.0 -U sa -P $password -d $database -i $entry
 done
 
 #import the data from the csv files
+echo Importing Table Data
 for entry in "data/*.csv"
 do
   # i.e: transform /data/MyTable.csv to MyTable
@@ -26,3 +32,6 @@ do
   echo importing $tableName from $entry
   /opt/mssql-tools/bin/bcp $tableName in $entry -c -t',' -F 2 -S 0.0.0.0 -U sa -P $password
 done
+
+uname -a
+echo SQLServer startup complete.
