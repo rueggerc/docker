@@ -14,6 +14,7 @@ echo 'drop database' $database';' > ./dbinit.sql
 echo 'create database' $database';' >> ./dbinit.sql
 echo Init DB $database ...
 /opt/mssql-tools/bin/sqlcmd -S 0.0.0.0 -U sa -P $password -i ./dbinit.sql
+rm ./dbinit.sql
 
 echo Executing SQL commands
 for entry in "table/*.sql"
