@@ -14,4 +14,4 @@ services:
       - DBNAME=rueggerllc
     command: sh -c 'chmod +x ./entrypoint.sh; sh ./entrypoint.sh & /opt/mssql/bin/sqlservr;'
     ports:
-      - "1434:1433"
+      - "1433:1433"

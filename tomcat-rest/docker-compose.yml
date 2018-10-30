@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  jersey-rest:
+    image: tomcat:8.0.47-jre8
+    container_name: tomcat-rest
+    volumes:
+      - ./build/libs:/usr/local/tomcat/webapps
+    ports:
+      - "8080:8080"

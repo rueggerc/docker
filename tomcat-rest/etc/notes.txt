@@ -1,0 +1,8 @@
+Development Notes
+=================
+
+# Welcome
+http://localhost:8080/tomcat-rest/
+
+# Get Books
+http://localhost:8080/tomcat-rest/rest/books/books
