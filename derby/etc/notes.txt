@@ -1,0 +1,5 @@
+
+# Create Database
+jdbc:derby://localhost:1527/rueggerllc;create=true
+
+SET SCHEMA = chris;
