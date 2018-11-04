@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  postgres-service:
+    image: postgres:10.5-alpine
+    container_name: postgres
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
+    environment:
+      - POSTGRES_USER=chris
+      - POSTGRES_PASSWORD=dakota
+      - POSTGRES_DB=rueggerllc
+    ports:
+      - "5432:5432"
