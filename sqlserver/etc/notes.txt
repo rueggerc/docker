@@ -1,0 +1,6 @@
+
+# Find second highest quantity
+select max(quantity) 
+from products
+where (quantity <
+(select max(quantity) from products));
