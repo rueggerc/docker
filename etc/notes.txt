@@ -1,0 +1,3 @@
+
+# Connect to running container
+docker exec -it sqlserver bash

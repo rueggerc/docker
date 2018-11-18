@@ -25,13 +25,13 @@ done
 
 #import the data from the csv files
 echo Importing Table Data
-for entry in "data/*.csv"
+for entry in data/*.csv
 do
   # i.e: transform /data/MyTable.csv to MyTable
   shortname=$(echo $entry | cut -f 1 -d '.' | cut -f 2 -d '/')
   tableName=$database.dbo.$shortname
   echo importing $tableName from $entry
-  /opt/mssql-tools/bin/bcp $tableName in $entry -c -t',' -F 2 -S 0.0.0.0 -U sa -P $password
+  /opt/mssql-tools/bin/bcp $tableName in $entry -c -t',' -F 1 -S 0.0.0.0 -U sa -P $password
 done
 
 uname -a
