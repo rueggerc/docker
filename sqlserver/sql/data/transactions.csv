@@ -1,8 +1,8 @@
-id,transaction_date,description,count
-1,2018-10-18,Transaction2,55
-3,2018-10-18,Transaction3,56
-4,2018-10-18,Transaction4,57
-5,2018-10-18,Transaction5,42
-6,2018-10-18,Transaction6,42
-7,2018-10-18,Transaction7,42
-8,2018-10-18,Transaction8,42
+id,transaction_date,post_date,card_no,description,category,debit,credit
+0,2018-10-17,2018-10-18,2848,BRITBOX,Other Services,6.99,0
+1,2018-10-16,2018-10-18,2848,AMERICAS BEST 5825,Healthcare,178.04,0
+2,2018-10-17,2018-10-17,2848,AMZN Mktp US*MT61N9YD1,Merchandise,12.71,0
+3,2018-10-16,2018-10-17,2848,MICHAELS STORES 9172,Merchandise,39.48,0
+4,2018-10-16,2018-10-17,2848,AMZN Mktp US*MT6FP9Y72,Merchandise,9.05,0
+5,2018-10-16,2018-10-17,2848,AMZN Mktp US*MT9GF9YL0,Merchandise,133.20,0
+6,2018-10-16,2018-10-17,2848,KROGER #635,Merchandise,103.84,0

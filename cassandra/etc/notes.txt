@@ -1,0 +1,27 @@
+Cassandra Notes
+=================
+
+# Run Node Tool status
+docker exec -it cassandra nodetool status
+
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address     Load       Tokens  Owns (effective)  Host ID                               Rack
+UN  172.21.0.2  51.52 KB   256     100.0%            a621512a-19f2-4391-86ab-35e38f06f8f9  rack1
+
+
+# Run Node Tool Ring
+# Displays list of token ranges allocated across nodes
+docker exec -it cassandra nodetool ring
+
+# Login to Cassandra container
+docker exec -it cassandra /bin/bash
+
+
+# Add second node to cassandra
+docker run --name cassandra2 -d tobert/cassandra -seeds 171.21.0.2
+
+
+
