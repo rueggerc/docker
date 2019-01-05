@@ -16,38 +16,38 @@ values
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 11:34:09', 72.38);
+('sensor1', 'temperature', '20120618 11:34:09', 74.38);
 
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 12:34:09', 72.38);
+('sensor1', 'temperature', '20120618 12:34:09', 76.38);
 
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 18:34:09', 72.38);
-
-
-insert into readings
-(sensor_id, notes, reading_time, reading)
-values 
-('sensor1', 'temperature', '20120618 20:12:14', 72.38);
+('sensor1', 'temperature', '20120618 18:34:09', 81.38);
 
 
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 21:12:14', 72.38);
+('sensor1', 'temperature', '20120618 20:12:14', 82.38);
+
 
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 22:12:14', 72.38);
+('sensor1', 'temperature', '20120618 21:12:14', 80.38);
 
 insert into readings
 (sensor_id, notes, reading_time, reading)
 values 
-('sensor1', 'temperature', '20120618 23:12:14', 72.38);
+('sensor1', 'temperature', '20120618 22:12:14', 85.38);
+
+insert into readings
+(sensor_id, notes, reading_time, reading)
+values 
+('sensor1', 'temperature', '20120618 23:12:14', 86.38);
 
 
