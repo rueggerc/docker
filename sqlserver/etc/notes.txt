@@ -4,3 +4,34 @@ select max(quantity)
 from products
 where (quantity <
 (select max(quantity) from products));
+
+
+create table southern (
+  id BIGINT IDENTITY(1000,1),
+  name varchar(40)
+);
+
+create table northern (
+  id BIGINT IDENTITY(1000,1),
+  name varchar(40)
+);
+
+insert into northern
+(name)
+VALUES
+('new jersey');
+
+
+insert into southern
+(name)
+VALUES
+('florida')
+
+insert into southern
+(name)
+VALUES
+('new jersey')
+
+select name from northern
+UNION all
+select name from southern;
