@@ -3,7 +3,7 @@ create table readings (
   id bigint not null primary key,
   sensor_id 	varchar(40),
   notes 	varchar(40),
-  reading_time	timestamp,
+  reading_time	timestamp with time zone default (current_timestamp at time zone 'EST'),
   reading    	decimal(15,2)
 );
 
