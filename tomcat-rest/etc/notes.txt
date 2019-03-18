@@ -1,8 +1,28 @@
 Development Notes
 =================
 
+# Build Image with Dockerfile
+docker image build -t tomcat-rest:1.0 .
+
+# Run Container 
+docker container run -d --name tomcat-rest1 -p 8084:8080 tomcat-rest:1.0
+
 # Welcome
-http://localhost:8080/tomcat-rest/
+http://localhost:8084/tomcat-rest/
 
 # Get Books
-http://localhost:8080/tomcat-rest/rest/books/books
+http://localhost:8084/tomcat-rest/rest/books/books
+
+
+# Run Detached with bash shell
+docker container run -d --name rest1 -p 8084:8080 docker-rest-jersey:1.0 /bin/bash
+CTRL-PQ
+
+# Attach to Running Process
+docker container exec -it tomcat-rest1 bash
+
+
+docker container exec -it <container-id> bash
+docker container exec -it mysql_database_1 bash
+
+
