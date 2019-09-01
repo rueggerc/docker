@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  postgres-service:
+    image: rueggerc/postgres-it:1.0
+    container_name: postgres-it-use
+    environment:
+      - POSTGRES_USER=chris
+      - POSTGRES_PASSWORD=dakota
+      - POSTGRES_DB=rueggerllc
+    ports:
+      - "5432:5432"
