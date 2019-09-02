@@ -4,8 +4,8 @@ services:
     image: rueggerc/postgres-it:1.0
     container_name: postgres-it-use
     environment:
-      - POSTGRES_USER=chris
-      - POSTGRES_PASSWORD=dakota
-      - POSTGRES_DB=rueggerllc
+      - POSTGRES_USER=testuser
+      - POSTGRES_PASSWORD=testpwd
+      - POSTGRES_DB=itdb
     ports:
       - "5432:5432"
