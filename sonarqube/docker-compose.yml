@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  sonar-service:
+    image: sonarqube:lts
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube
+volumes:
+  sonarqube_data:
