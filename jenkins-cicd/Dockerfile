@@ -18,8 +18,8 @@ RUN chmod 755 /usr/local/bin/docker-compose
 RUN usermod -aG docker jenkins
 
 # Windows Only
-RUN usermod -aG root jenkins
+#RUN usermod -aG root jenkins
 
 # Linux
-#RUN groupmod -g 987 docker
+RUN groupmod -g 1001 docker
 USER jenkins
