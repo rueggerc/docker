@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  jenkins20:
+    build: .
+    image: jenkins-cicd
+    container_name: jenkins
+    ports:
+      - 8081:8080
+      - 5000:5000
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+      - jenkins_home:/var/jenkins_home
+volumes:
+  jenkins_home:
