@@ -1,0 +1,4 @@
+
+
+npm set registry http://localhost:8081/npm-private/
+npm login --registry=http://localhost:8081/repository/npm-private/

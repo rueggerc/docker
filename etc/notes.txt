@@ -4,3 +4,6 @@ docker exec -it sqlserver bash
 
 # Postgres
 
+# Verdaccio
+
+
