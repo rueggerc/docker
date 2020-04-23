@@ -1,3 +1,6 @@
+create schema if not exists ruegger;
+SET search_path TO ruegger,public;
+
 create table products (
   id bigint not null primary key,
   product_id varchar(40),

@@ -1,3 +1,5 @@
+create schema if not exists ruegger;
+SET search_path TO ruegger,public;
 
 create table dht22_readings (
   id serial not null primary key,
