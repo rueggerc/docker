@@ -1,0 +1,17 @@
+Installation on captain or kube
+
+
+1. https://www.jfrog.com/confluence/display/JFROG/Installing+Artifactory#InstallingArtifactory-DockerComposeInstallation
+2. Download a pro version from downloads page:
+   e.g. jfrog-artifactory-pro-7.2.0-compose.tar.gz
+   
+3. Extract this file to installation directory
+   run as root
+   su -l
+   cd jfrog-artifactory-pro-7.2.0
+   ./configure.sh  => generates docker-compose.yml file
+   
+4. edit generated docker-compose.yml file, replace image name with artifactory OSS (open source solutions) image name:
+   image: docker.bintray.io/jfrog/artifactory-oss
+   
+Start up Artifactory
