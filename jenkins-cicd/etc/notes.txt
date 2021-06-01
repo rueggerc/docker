@@ -1,0 +1,3 @@
+
+#Useful commands
+docker network inspect jenkins-cicd_cicd

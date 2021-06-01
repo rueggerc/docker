@@ -3,6 +3,8 @@ services:
   postgres:
     image: ${DOCKER_REGISTRY}/postgres:9.6.11
     container_name: postgresql
+    networks:
+      - jenkins-cicd_cicd 
     environment:
      - POSTGRES_DB=artifactory
      - POSTGRES_USER=artifactory
@@ -25,6 +27,8 @@ services:
   artifactory:
     image: docker.bintray.io/jfrog/artifactory-oss
     container_name: artifactory
+    networks:
+      - jenkins-cicd_cicd
     volumes:
      - ${ROOT_DATA_DIR}/var:/var/opt/jfrog/artifactory
     restart: always
@@ -45,4 +49,7 @@ services:
       options:
         max-size: "50m"
         max-file: "10"
-  
+
+networks:
+  jenkins-cicd_cicd:
+    external: true

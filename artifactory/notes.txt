@@ -13,5 +13,6 @@ Installation on captain or kube
    
 4. edit generated docker-compose.yml file, replace image name with artifactory OSS (open source solutions) image name:
    image: docker.bintray.io/jfrog/artifactory-oss
+          docker.bintray.io/jfrog/artifactory-oss
    
 Start up Artifactory

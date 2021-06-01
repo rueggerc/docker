@@ -1,0 +1,14 @@
+
+Setting Up Webhook
+===================
+http://jenkins:8080/sonarqube-webhook/
+
+NOTE:
+jenkins is service name of jenkins server
+port 8080 is the *container* port used, NOT port exposed to host
+
+To see ports exposed by containers:
+docker inspect jenkins
+
+-
+

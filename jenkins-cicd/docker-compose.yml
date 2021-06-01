@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  jenkins20:
+  jenkins:
     build: .
     image: jenkins-cicd
     container_name: jenkins
@@ -11,9 +11,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home
     networks:
-      - sonarqube_sonarnet
+      - cicd
 volumes:
   jenkins_home:
+
 networks:
-  sonarqube_sonarnet:
-    external: true
+  cicd:
+    driver: bridge
