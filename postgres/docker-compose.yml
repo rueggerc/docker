@@ -11,3 +11,9 @@ services:
       - POSTGRES_DB=rueggerllc
     ports:
       - "5432:5432"
+    networks:
+      - postgres_network
+      
+networks:
+  postgres_network:
+    driver: bridge
