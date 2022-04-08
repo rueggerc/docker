@@ -1,17 +1,12 @@
-version: "3.3"
+version: '3.9'
 services:
-  sql.data:
-    image: microsoft/mssql-server-linux
-    container_name: sqlserver
-    volumes:
-      - /var/opt/mssql
-      - ./sql:/usr/src/app
-    working_dir: /usr/src/app
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql-server
+    ports:
+      - 1433:1433
     environment:
-      - MSSQL_SA_PASSWORD=Dakota123%
       - ACCEPT_EULA=Y
+      - SA_PASSWORD=Dakota123%
       - MSSQL_PID=Developer
       - DBNAME=rueggerllc
-    command: sh -c 'chmod +x ./entrypoint.sh; sh ./entrypoint.sh & /opt/mssql/bin/sqlservr;'
-    ports:
-      - "1433:1433"
