@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  api:
+    build: .
+    container_name: runloop
+    command: /bin/bash -c "/runloop.sh"
+    expose:
+      - "5000"
+     
