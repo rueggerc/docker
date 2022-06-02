@@ -1,8 +1,11 @@
 #/bin/bash
 
+echo "Run Loop Script"
 while :
 do
-	echo "Press [CTRL+C] to stop.."
-	sleep 1
+	echo "IN LOOP!! Press [CTRL+C] to stop.."
+	echo "Environment Variables:"
+        export
+	sleep 60
 done
 
